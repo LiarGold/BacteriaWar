@@ -14,10 +14,8 @@ public class CResourceManager : CSingleton<CResourceManager>
 	private Dictionary<string, RuntimeAnimatorController> _runTimeAnimatorControllerList = null;
 
 	//! 초기화
-	public override void Awake()
+	public void Awake()
 	{
-		base.Awake();
-
 		_shaderList = new Dictionary<string, Shader>();
 		_spriteList = new Dictionary<string, Sprite>();
 		_textureList = new Dictionary<string, Texture>();

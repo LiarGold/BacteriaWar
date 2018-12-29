@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //! 이벤트 디스패처
-public class CEventDispatcher : CComponent {
+public class CEventDispatcher : UnityEngine.MonoBehaviour
+{
 
 	public System.Action<GameObject, string> EventHandler { get; set; }
 

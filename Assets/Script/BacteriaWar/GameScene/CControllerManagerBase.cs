@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//! 게임 씬
-public class CGameScene : CSceneManager
-{
+public class CControllerManagerBase : MonoBehaviour {
 
-
+	
 }
+

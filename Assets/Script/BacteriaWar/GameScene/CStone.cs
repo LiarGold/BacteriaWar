@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //! 돌
-public class CStone : CComponent
+public class CStone : MonoBehaviour
 {
 	#region
 	public EStoneColor _stoneColor = EStoneColor.NONE;
@@ -14,57 +14,16 @@ public class CStone : CComponent
 
 	private bool _isSelect = false;
 
-	public override void Awake()
-	{
-		base.Awake();
-
+	public void Awake()
+    {
 		ChangeStoneColor();
 	}
 
 	public void OnTouchStone()
 	{
-		var selectColor = CControllerManager.Instance.SelectStoneColor;
-
-		switch (selectColor)
-		{
-			case EStoneColor.RED:
-				{
-					if (!_isActive)
-					{
-						_stoneColor = selectColor;
-					}
-					else
-					{
-
-					}
-				}
-				break;
-			case EStoneColor.BLUE:
-				{
-					if (!_isActive)
-					{
-						_stoneColor = selectColor;
-					}
-				}
-				break;
-			case EStoneColor.NONE:
-				{
-					if (_isActive)
-					{
-						CControllerManager.Instance.SelectStoneColor = _stoneColor;
-						var color = _stoneButton.image.color;
-						color += Color.black;
-						_stoneButton.image.color = color;
-					}
-				}
-				break;
-			default:
-				break;
-		}
 
 		ChangeStoneColor();
 
-		Function.ShowLog("GameStatus : {0}", CControllerManager.Instance.SelectStoneColor.ToString());
 	}
 
 	public void ChangeStoneColor()

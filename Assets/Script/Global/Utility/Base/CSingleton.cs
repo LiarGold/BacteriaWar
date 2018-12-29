@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //! 싱글톤
-public class CSingleton<T> : CComponent where T : CComponent
+public class CSingleton<T> : UnityEngine.MonoBehaviour where T : UnityEngine.MonoBehaviour
 {
     private static T _instance = null;
 

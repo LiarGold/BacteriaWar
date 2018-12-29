@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //! 접촉 이벤트 디스패처
-public class CTriggerDispatcher : CComponent {
+public class CTriggerDispatcher : MonoBehaviour {
 
 	public System.Action<GameObject, Collider> TriggerEnter { get; set; }
 	public System.Action<GameObject, Collider> TriggerStay { get; set; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //! 충돌 이벤트 디스패처
-public class CCollisionDispatcher : CComponent {
+public class CCollisionDispatcher : UnityEngine.MonoBehaviour {
 
 	public System.Action<GameObject, Collision> CollisionEnter { get; set; }
 	public System.Action<GameObject, Collision> CollisionStay { get; set; }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CSceneManager : CComponent
+public class CSceneManager : UnityEngine.MonoBehaviour
 {
 	//! UI 카메라 프로퍼티
 	public static Camera UICamera
@@ -51,33 +51,22 @@ public class CSceneManager : CComponent
 
 
 	//! 초기화
-	public override void Awake()
+	public void Awake()
     {
-        base.Awake();
-
 		// 카메라를 설정한다
         this.SetupUICamera();
         this.SetupMainCamera();
 
 		// 싱글톤 객체를 생성한다
-		CSoundManager.Create();
 		CResourceManager.Create();
-		CUnityMessageSender.Create();
-		CDeviceMessageReceiver.Create();
-
-		// 문자열 리스트를 불러온다
-		CLocalizeManager.Instance.ResetStringList();
-		CLocalizeManager.Instance.LoadStringListFromFile("Datas/Localize/HomeWorks/UnityGui/EN_Language");
 
         // 해상도를 변경한다
         Screen.SetResolution(KDefine.SCREEN_WIDTH, KDefine.SCREEN_HEIGHT, false);
     }
 
 	//! 상태를 갱신한다
-	public override void Update()
+	public void Update()
 	{
-		base.Update();
-
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 #if !UNITY_EDITOR && UNITY_ANDROID

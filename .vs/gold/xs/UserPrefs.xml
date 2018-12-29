@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{88B79C86-6F45-9CA7-C15F-18C8A692A4F7}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/BacteriaWar/StartScene/CStartScene.cs">
+    <Files>
+      <File FileName="Assets/Script/Global/Utility/Base/CSingleton.cs" Line="3" Column="19" />
+      <File FileName="Assets/Script/Global/Utility/Base/CSceneManager.cs" Line="68" Column="9" />
+      <File FileName="Assets/Script/BacteriaWar/GameScene/CGameScene.cs" Line="8" Column="5" />
+      <File FileName="Assets/Script/BacteriaWar/GameScene/CControllerManagerBase.cs" Line="7" Column="2" />
+      <File FileName="Assets/Script/BacteriaWar/GameScene/CStone.cs" Line="7" Column="23" />
+      <File FileName="Assets/Script/Global/Utility/Dispatcher/CCollisionDispatcher.cs" Line="17" Column="52" />
+      <File FileName="Assets/Script/Global/Utility/Dispatcher/CEventDispatcher.cs" Line="20" Column="1" />
+      <File FileName="Assets/Script/BacteriaWar/StartScene/CStartScene.cs" Line="11" Column="8" />
+      <File FileName="Assets/Script/Global/Utility/Manager/CResourceManager.cs" Line="26" Column="3" />
+      <File FileName="Assets/Script/Global/Utility/Sprite/CSprite.cs" Line="22" Column="3" />
+      <File FileName="Assets/Script/Global/Utility/Dispatcher/CTriggerDispatcher.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
