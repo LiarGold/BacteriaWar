@@ -2,15 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//! 씬 인덱스
-public enum ESceneIndex
-{
-	START_SCENE,
-	GAME_SCENE,
-	RESULT_SCENE,
-	NONE
-}
-
 //! 마우스 버튼
 public enum EMouseButton
 {
@@ -20,11 +11,12 @@ public enum EMouseButton
 	NONE
 }
 
-//! 돌 색깔
-public enum EStoneColor
+public enum EGamePhase
 {
-	RED,
-	BLUE,
+	IDLE,
+	SELECT,
+	MOVE,
+	PRODUCTION,
 	NONE
 }
 
