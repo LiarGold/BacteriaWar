@@ -63,6 +63,9 @@
     <Compile Include="Assets\Script\BacteriaWar\GameScene\CGameController.cs" />
     <Compile Include="Assets\Script\BacteriaWar\GameScene\CGameScene.cs" />
     <Compile Include="Assets\Script\BacteriaWar\GameScene\CStone.cs" />
+    <Compile Include="Assets\Script\BacteriaWar\GameScene\Input\C1PInputManager.cs" />
+    <Compile Include="Assets\Script\BacteriaWar\GameScene\Input\C2PInputManager.cs" />
+    <Compile Include="Assets\Script\BacteriaWar\GameScene\Input\CInputManagerBase.cs" />
     <Compile Include="Assets\Script\BacteriaWar\StartScene\CStartScene.cs" />
     <Compile Include="Assets\Script\Global\Define\KDefine.Global.cs" />
     <Compile Include="Assets\Script\Global\Define\KDefine.Utility.cs" />
