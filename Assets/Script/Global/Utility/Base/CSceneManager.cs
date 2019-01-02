@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CSceneManager : UnityEngine.MonoBehaviour
+public class CSceneManager : MonoBehaviour
 {
 	//! UI 카메라 프로퍼티
 	public static Camera UICamera
@@ -63,36 +63,6 @@ public class CSceneManager : UnityEngine.MonoBehaviour
         // 해상도를 변경한다
         Screen.SetResolution(KDefine.SCREEN_WIDTH, KDefine.SCREEN_HEIGHT, false);
     }
-
-	//! 상태를 갱신한다
-	public void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-#if !UNITY_EDITOR && UNITY_ANDROID
-			var jsonObject = new SimpleJSON.JSONClass();
-			jsonObject["Title"] = "알림";
-			jsonObject["Message"] = "메세지";
-			jsonObject["OKButtonTitle"] = "확인";
-			jsonObject["CancelButtonTile"] = "취소";
-
-			CUnityMessageSender.Instance.SendMessage("ShowAlert",
-				jsonObject.ToString(),
-				(command, message) =>
-				{
-					bool isQuit = bool.Parse(message);
-
-					if (isQuit)
-					{
-						Application.Quit();
-					}
-				});
-
-#else
-			Application.Quit();
-#endif
-		}
-	}
 
 	//! UI 카메라를 설정한다
 	protected virtual void SetupUICamera()

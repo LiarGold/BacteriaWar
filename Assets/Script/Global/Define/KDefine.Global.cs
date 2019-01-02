@@ -11,12 +11,20 @@ public enum EMouseButton
 	NONE
 }
 
+//! 게임 단계
 public enum EGamePhase
 {
-	IDLE,
 	SELECT,
 	MOVE,
-	PRODUCTION,
+	INFECT,
+	NONE
+}
+
+//! 세균 색깔
+public enum EGermColor
+{
+	RED,
+	BLUE,
 	NONE
 }
 

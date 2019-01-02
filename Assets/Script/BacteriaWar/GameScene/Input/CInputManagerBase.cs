@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CInputManagerBase : MonoBehaviour
+abstract public class CInputManagerBase : MonoBehaviour
 {
-    public virtual int GetSelectCellIndex()
-	{
-
-	}
+	public abstract CCell GetSelectCell();
+	public abstract CCell GetMoveCell();
 }
