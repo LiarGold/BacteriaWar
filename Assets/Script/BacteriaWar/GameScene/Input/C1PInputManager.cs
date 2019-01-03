@@ -13,9 +13,8 @@ public class C1PInputManager : CInputManagerBase
 		{
 			var cell = rayCastHit.collider.GetComponent<CCell>();
 
-			if (cell != null && cell.CellStatus != EGermColor.NONE)
+			if (cell != null && cell.CellStatus == EGermColor.BLUE)
 			{
-				Function.ShowLog("SelectCell X : {0}, Y : {1}", cell.CellIndex[0], cell.CellIndex[1]);
 				return cell.OnClickCell();
 			}
 			else
@@ -40,7 +39,6 @@ public class C1PInputManager : CInputManagerBase
 
 			if (cell != null && cell.CellStatus == EGermColor.NONE)
 			{
-				Function.ShowLog("MoveCell X : {0}, Y : {1}", cell.CellIndex[0], cell.CellIndex[1]);
 				return cell.OnClickCell();
 			}
 			else

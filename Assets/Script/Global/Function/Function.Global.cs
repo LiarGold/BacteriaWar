@@ -16,7 +16,7 @@ public static partial class Function
 	public static void LateCall(System.Action<object[]> callBack, float delay, params object[] tempParams)
 	{
 		var sceneManager = CSceneManager.CurrentSceneManager;
-		sceneManager.StartCoroutine(Function.DoLateCall(callBack, delay, tempParams));
+		sceneManager.StartCoroutine(DoLateCall(callBack, delay, tempParams));
 	}
 
 	//! 비동기 연산을 대기한다
@@ -133,7 +133,7 @@ public static partial class Function
 		bool isResetTransform = false)
 	{
 		var originObject = CResourceManager.Instance.GetObjectForKey(filePath);
-		return Function.CreateCopiedGameObject(name, originObject, parent);
+		return CreateCopiedGameObject(name, originObject, parent);
 	}
 
 	//! 게임 객체를 생성한다
@@ -142,9 +142,9 @@ public static partial class Function
 		bool isWorldStay = false,
 		bool isResetTransform = false) where T : Component
 	{
-		var gameObject = Function.CreateGameObject(name, parent, isWorldStay, isResetTransform);
+		var gameObject = CreateGameObject(name, parent, isWorldStay, isResetTransform);
 
-		return Function.AddComponent<T>(gameObject);
+		return AddComponent<T>(gameObject);
 	}
 
 	//! 사본 게임 객체를 생성한다
@@ -154,7 +154,7 @@ public static partial class Function
 		bool isWorldStay = false,
 		bool isResetTransform = false) where T : Component
 	{
-		var gameObject = Function.CreateCopiedGameObject(name,
+		var gameObject = CreateCopiedGameObject(name,
 			origin,
 			parent,
 			isWorldStay,
@@ -170,7 +170,7 @@ public static partial class Function
 		bool isWorldStay = false,
 		bool isResetTransform = false) where T : Component
 	{
-		var gameObject = Function.CreateCopiedGameObject(name,
+		var gameObject = CreateCopiedGameObject(name,
 			filePath,
 			parent,
 			isWorldStay,

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //! 싱글톤
-public class CSingleton<T> : UnityEngine.MonoBehaviour where T : UnityEngine.MonoBehaviour
+public class CSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance = null;
 
@@ -27,6 +27,6 @@ public class CSingleton<T> : UnityEngine.MonoBehaviour where T : UnityEngine.Mon
     //! 인스턴스를 생성한다
     public static T Create()
     {
-        return CSingleton<T>.Instance;
+        return Instance;
     }
 }

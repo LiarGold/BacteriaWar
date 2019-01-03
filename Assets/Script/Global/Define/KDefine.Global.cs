@@ -17,14 +17,16 @@ public enum EGamePhase
 	SELECT,
 	MOVE,
 	INFECT,
+	TURNCHANGE,
+	GAMEOVER,
 	NONE
 }
 
 //! 세균 색깔
 public enum EGermColor
 {
-	RED,
 	BLUE,
+	RED,
 	NONE
 }
 
